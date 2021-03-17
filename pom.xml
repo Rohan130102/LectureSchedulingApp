@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -26,23 +27,24 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		
+
 		<dependency>
-			 <groupId>org.springframework.security</groupId>
-			 <artifactId>spring-security-web</artifactId>
-			 <version>${springsecurity.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${springframework.version}</version>
 		</dependency>
-		
+
+
+		<!-- <dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-web</artifactId> 
+			<version>${springsecurity.version}</version> </dependency> <dependency> <groupId>org.springframework.security</groupId> 
+			<artifactId>spring-security-config</artifactId> <version>${springsecurity.version}</version> 
+			</dependency> <dependency> <groupId>org.springframework.security</groupId> 
+			<artifactId>spring-security-taglibs</artifactId> <version>${springsecurity.version}</version> 
+			</dependency> -->
 		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		  	<artifactId>spring-security-config</artifactId>
-		  	<version>${springsecurity.version}</version>
-		</dependency>
-		
-		<dependency>
-			 <groupId>org.springframework.security</groupId>
-			 <artifactId>spring-security-taglibs</artifactId>
-			 <version>${springsecurity.version}</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.12.Final</version>
 		</dependency>
 
 		<dependency>
@@ -50,7 +52,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.45</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
@@ -78,9 +80,9 @@
 
 		<!-- to compensate for java 9+ not including jaxb -->
 		<dependency>
-		    <groupId>javax.xml.bind</groupId>
-		    <artifactId>jaxb-api</artifactId>
-		    <version>2.3.0</version>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
 		</dependency>
 
 		<dependency>
@@ -93,15 +95,15 @@
 	</dependencies>
 
 	<!-- TO DO: Add support for Maven WAR Plugin -->
-	
+
 	<build>
 		<finalName>spring-security-demo</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-				    <artifactId>maven-war-plugin</artifactId>
-				    <version>3.3.1</version>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.1</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
